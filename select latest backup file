@@ -1,0 +1,3 @@
+$dir = "E:\Software_Backup\"
+$filter="*.bak"
+$fileName = Get-ChildItem -Path $dir -Filter $filter | Sort-Object LastAccessTime -Descending | Select-Object -First 1
