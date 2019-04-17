@@ -1,0 +1,10 @@
+$FROM 	= "myemail@mydomain.com"
+$TO	    = "targetemail@anydomain.ca"
+
+$SMTP1 	= "first smtp srv"
+$SMTP2 	= "second smtp srv"
+$SMTP3 	= "third smtp srv"
+
+$SUB 	= "my subject"
+
+send-mailmessage -from $from -to $to -subject $sub -smtpserver $smtp2
