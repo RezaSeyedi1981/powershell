@@ -1,0 +1,9 @@
+
+########## Remove temporary files and folder on each PC ##########
+
+foreach ($Computer in $Computers) {
+    Write-Host "Removing Temporary files on $Computer"
+    $RemovalPath = "\\$Computer\c$\temp\*.*"
+    Get-ChildItem  -Path $RemovalPath -Recurse  | Remove-Item -Force -Recurse
+    Remove-Item $RemovalPath -Force -Recurse
+    }
